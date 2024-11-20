@@ -1,0 +1,33 @@
+.board-container {
+  padding: 20px;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 0 16px;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.board-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.board-columns {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 16px;
+}
