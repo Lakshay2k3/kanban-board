@@ -11,7 +11,7 @@ const DisplayButton = ({ grouping, sorting, onGroupingChange, onSortingChange, d
         className="display-button"
         onClick={() => setIsOpen(!isOpen)}
       >
-      <img src={displayIcon} alt="Display" className="w-6 h-6 mr-2" />
+        <DisplayIcon className="w-6 h-6 mr-2" />
         Display {isOpen ? '▼' : '▲'}
       </button>
       
