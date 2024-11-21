@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import './DisplayButton.css';
-import DisplayIcon from '../icons_FEtask/Display.svg';
+import DisplaySVG from '../icons_FEtask/Display.svg';
 
-const DisplayButton = ({ grouping, sorting, onGroupingChange, onSortingChange, displayIcon }) => {
+const DisplayButton = ({ grouping, sorting, onGroupingChange, onSortingChange }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="display-button-container">
-      <button 
+      <button
         className="display-button"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <DisplayIcon className="w-6 h-6 mr-2" />
+        <img src={DisplaySVG} alt="Display" className="w-6 h-6 mr-2" />
         Display {isOpen ? '▼' : '▲'}
       </button>
-      
+
       {isOpen && (
         <div className="dropdown-menu">
           <div className="dropdown-item">
             <label>Grouping:</label>
-            <select 
+            <select
               value={grouping}
               onChange={(e) => onGroupingChange(e.target.value)}
             >
@@ -28,10 +28,10 @@ const DisplayButton = ({ grouping, sorting, onGroupingChange, onSortingChange, d
               <option value="priority">Priority</option>
             </select>
           </div>
-          
+
           <div className="dropdown-item">
             <label>Sorting:</label>
-            <select 
+            <select
               value={sorting}
               onChange={(e) => onSortingChange(e.target.value)}
             >
